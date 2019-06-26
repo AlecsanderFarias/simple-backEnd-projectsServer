@@ -4,18 +4,7 @@ const server = express();
 server.use(express.json());
 
 let chamadas = 0;
-const projects = [
-  {
-    id: "1",
-    title: "Novo projeto",
-    tasks: ["Nova Tarefa-0", "Nova Tarefa-1"]
-  },
-  {
-    id: "2",
-    title: "Novo projet2",
-    tasks: ["Nova Tarefa-0", "Nova Tarefa-1"]
-  }
-];
+const projects = [];
 
 function checkProjectExists(req, res, next) {
   const id = req.params.id;
